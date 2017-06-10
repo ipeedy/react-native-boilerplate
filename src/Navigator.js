@@ -4,6 +4,7 @@ import {
   TabNavigator,
   StackNavigator,
   DrawerNavigator,
+  TabBarBottom,
 } from 'react-navigation';
 
 import WelcomeScreen from './screens/Welcome';
@@ -18,6 +19,11 @@ const AppMainTab = TabNavigator({
   Home: { screen: HomeScreen },
   Favorites: { screen: FavoritesScreen },
   Profile: { screen: ProfileScreen },
+}, {
+  tabBarOptions: {
+    activeTintColor: '#F48FB1',
+  },
+  tabBarComponent: (props) => <TabBarBottom { ...props }/>,
 });
 
 const AppDrawer = DrawerNavigator({

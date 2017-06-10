@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 
 class HomeScreen extends Component {
+  static navigationOptions = {
+    tabBarLabel: 'Home',
+    tabBarIcon: ({ tintColor }) => (
+      <FontAwesome name="home" size={25} color={tintColor} />
+    )
+  }
+
   render() {
     return (
       <View style={styles.container}>

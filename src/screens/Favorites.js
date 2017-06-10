@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 
 class FavoritesScreen extends Component {
   static navigationOptions = {
-    drawerLabel: 'Favorites',
+    tabBarLabel: 'Favorites',
+    tabBarIcon: ({ tintColor }) => (
+      <FontAwesome name="heartbeat" size={25} color={tintColor} />
+    )
   }
 
   render() {

@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 
 class ProfileScreen extends Component {
   static navigationOptions = {
-    drawerLabel: 'Profile',
+    tabBarLabel: 'Profile',
+    tabBarIcon: ({ tintColor }) => (
+      <FontAwesome name="user-circle" size={25} color={tintColor} />
+    )
   }
 
   render() {
