@@ -2,13 +2,27 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
+import { Hamburger } from '../components';
+
 class FavoritesScreen extends Component {
-  static navigationOptions = {
+  static navigationOptions = ({ navigation }) => ({
     tabBarLabel: 'Favorites',
     tabBarIcon: ({ tintColor }) => (
       <FontAwesome name="heartbeat" size={25} color={tintColor} />
+    ),
+    headerStyle: {
+      backgroundColor: '#F8BBD0',
+    },
+    headerTitle: 'Favorites',
+    headerTitleStyle: {
+      color: '#fff',
+    },
+    headerLeft: (
+      <View style={{ left: 15 }}>
+        <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />
+      </View>
     )
-  }
+  });
 
   render() {
     return (

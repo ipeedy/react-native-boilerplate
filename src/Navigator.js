@@ -21,7 +21,10 @@ const AppMainTab = TabNavigator({
   Profile: { screen: ProfileScreen },
 }, {
   tabBarOptions: {
-    activeTintColor: '#F48FB1',
+    activeTintColor: 'white',
+    inactiveTintColor: '#F8BBD0',
+    inactiveBackgroundColor: '#FCE4EC',
+    activeBackgroundColor: '#F8BBD0',
   },
   tabBarComponent: (props) => <TabBarBottom { ...props }/>,
 });
@@ -29,6 +32,11 @@ const AppMainTab = TabNavigator({
 const AppMainStack = StackNavigator({
   Home: { screen: AppMainTab },
   Settings: { screen: SettingsScreen },
+}, {
+  cardStyle: {
+    backgroundColor: '#FCE4EC',
+  },
+  mode: 'modal',
 });
 
 const AppDrawer = DrawerNavigator({

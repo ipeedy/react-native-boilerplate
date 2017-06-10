@@ -1,27 +1,42 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 
+import { Hamburger } from '../components';
+
 class ProfileScreen extends Component {
-  static navigationOptions = {
+  static navigationOptions = ({ navigation }) => ({
     tabBarLabel: 'Profile',
     tabBarIcon: ({ tintColor }) => (
       <FontAwesome name="user-circle" size={25} color={tintColor} />
     ),
-  }
+    headerStyle: {
+      backgroundColor: '#F8BBD0',
+    },
+    headerTitle: 'Profile',
+    headerTitleStyle: {
+      color: '#fff',
+    },
+    headerLeft: (
+      <View style={{ left: 15 }}>
+        <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />
+      </View>
+    ),
+    headerRight: (
+      <View style={{ right: 15 }}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Settings')}
+        >
+          <Ionicons name="md-settings" size={22} color="white" />
+        </TouchableOpacity>
+      </View>
+    )
+  })
 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Profile</Text>
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            underlayColor="#F06292"
-            onPress={() => this.props.navigation.navigate('Settings')}
-          >
-            <Ionicons name="md-settings" size={50} color="#F48FB1" />
-          </TouchableHighlight>
-        </View>
       </View>
     );
   }
@@ -36,9 +51,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     color: 'white',
-  },
-  buttonContainer: {
-    top: 50,
   },
 });
 
