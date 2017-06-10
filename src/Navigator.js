@@ -26,9 +26,14 @@ const AppMainTab = TabNavigator({
   tabBarComponent: (props) => <TabBarBottom { ...props }/>,
 });
 
+const AppMainStack = StackNavigator({
+  Home: { screen: AppMainTab },
+  Settings: { screen: SettingsScreen },
+});
+
 const AppDrawer = DrawerNavigator({
   Home: {
-    screen: AppMainTab,
+    screen: AppMainStack,
   },
   Settings: {
     screen: SettingsScreen,
