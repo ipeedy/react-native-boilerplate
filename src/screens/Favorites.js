@@ -9,7 +9,7 @@ class FavoritesScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     tabBarLabel: 'Favorites',
     tabBarIcon: ({ tintColor }) => (
-      <FontAwesome name="heartbeat" size={25} color={tintColor} />
+      <FontAwesome name="heartbeat" size={23} color={tintColor} />
     ),
     headerStyle: {
       backgroundColor: Colors.PINK_100,

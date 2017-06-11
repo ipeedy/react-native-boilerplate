@@ -9,7 +9,7 @@ class HomeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     tabBarLabel: 'Home',
     tabBarIcon: ({ tintColor }) => (
-      <FontAwesome name="home" size={25} color={tintColor} />
+      <FontAwesome name="home" size={23} color={tintColor} />
     ),
     headerStyle: {
       backgroundColor: Colors.PINK_100,

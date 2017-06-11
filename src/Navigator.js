@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import {
   TabNavigator,
   StackNavigator,
@@ -23,10 +24,20 @@ const AppMainTab = TabNavigator({
 }, {
   tabBarOptions: {
     activeTintColor: Colors.WHITE,
-    inactiveTintColor: Colors.PINK_100,
+    inactiveTintColor: Platform.OS === 'ios' ? Colors.PINK_100 : Colors.WHITE,
+    inactiveBackgroundColor: Platform.OS === 'ios' ? Colors.WHITE : Colors.PINK_100,
     activeBackgroundColor: Colors.PINK_100,
+    showIcon: true,
+    showLabel: Platform.OS === 'ios',
+    indicatorStyle: {
+      backgroundColor: Colors.PINK_300,
+    },
+    style: {
+      backgroundColor: Colors.PINK_100,
+    },
+    upperCaseLabel: false,
   },
-  tabBarComponent: (props) => <TabBarBottom { ...props }/>,
+  // tabBarComponent: (props) => <TabBarBottom { ...props }/>,
   tabBarPosition: 'bottom',
   swipeEnabled: false,
   animationEnabled: false,
@@ -50,7 +61,6 @@ const AppDrawer = DrawerNavigator({
     screen: SettingsScreen,
   },
 }, {
-  drawerWidth: 290,
   contentComponent: props =>
     <CustomDrawerContent
       { ...props }

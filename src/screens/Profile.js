@@ -9,7 +9,7 @@ class ProfileScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     tabBarLabel: 'Profile',
     tabBarIcon: ({ tintColor }) => (
-      <FontAwesome name="user-circle" size={25} color={tintColor} />
+      <FontAwesome name="user-circle" size={23} color={tintColor} />
     ),
     headerStyle: {
       backgroundColor: Colors.PINK_100,
