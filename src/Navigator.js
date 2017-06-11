@@ -23,10 +23,12 @@ const AppMainTab = TabNavigator({
   tabBarOptions: {
     activeTintColor: 'white',
     inactiveTintColor: '#F8BBD0',
-    inactiveBackgroundColor: '#FCE4EC',
     activeBackgroundColor: '#F8BBD0',
   },
   tabBarComponent: (props) => <TabBarBottom { ...props }/>,
+  tabBarPosition: 'bottom',
+  swipeEnabled: false,
+  animationEnabled: false,
 });
 
 const AppMainStack = StackNavigator({
@@ -47,6 +49,7 @@ const AppDrawer = DrawerNavigator({
     screen: SettingsScreen,
   },
 }, {
+  drawerWidth: 290,
   contentComponent: props =>
     <CustomDrawerContent
       { ...props }
@@ -64,6 +67,7 @@ const Navigator = TabNavigator({
   navigationOptions: {
     tabBarVisible: false,
   },
+  swipeEnabled: false,
 });
 
 export default Navigator;

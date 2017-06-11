@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 
-import { Hamburger } from '../components';
+import { Hamburger, Settings } from '../components/icons';
 
 class ProfileScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -17,20 +17,8 @@ class ProfileScreen extends Component {
     headerTitleStyle: {
       color: '#fff',
     },
-    headerLeft: (
-      <View style={{ left: 15 }}>
-        <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />
-      </View>
-    ),
-    headerRight: (
-      <View style={{ right: 15 }}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Settings')}
-        >
-          <Ionicons name="md-settings" size={22} color="white" />
-        </TouchableOpacity>
-      </View>
-    )
+    headerLeft: <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />,
+    headerRight: <Settings onPress={() => navigation.navigate('Settings')} />,
   })
 
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -10,6 +10,14 @@ class App extends Component {
     return (
       <Provider store={store}>
         <View style={styles.container}>
+          { Platform.OS === 'android' && Platform.Version >= 20 ?
+          <View
+            style={{
+              height: 24,
+              backgroundColor: "rgba(0, 0, 0, 0.15)",
+            }}
+          />
+          : null }
           <Navigator />
         </View>
       </Provider>

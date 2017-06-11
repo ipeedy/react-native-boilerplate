@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-import { Hamburger } from '../components';
+import { Hamburger } from '../components/icons';
 
 class HomeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -17,11 +17,7 @@ class HomeScreen extends Component {
     headerTitleStyle: {
       color: '#fff',
     },
-    headerLeft: (
-      <View style={{ left: 15 }}>
-        <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />
-      </View>
-    )
+    headerLeft: <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />
   });
 
   render() {
