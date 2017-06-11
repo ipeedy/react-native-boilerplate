@@ -1,11 +1,12 @@
 import React from 'react';
-
 import {
   TabNavigator,
   StackNavigator,
   DrawerNavigator,
   TabBarBottom,
 } from 'react-navigation';
+
+import Colors from './styles/Colors';
 
 import WelcomeScreen from './screens/Welcome';
 import HomeScreen from './screens/Home';
@@ -21,9 +22,9 @@ const AppMainTab = TabNavigator({
   Profile: { screen: ProfileScreen },
 }, {
   tabBarOptions: {
-    activeTintColor: 'white',
-    inactiveTintColor: '#F8BBD0',
-    activeBackgroundColor: '#F8BBD0',
+    activeTintColor: Colors.WHITE,
+    inactiveTintColor: Colors.PINK_100,
+    activeBackgroundColor: Colors.PINK_100,
   },
   tabBarComponent: (props) => <TabBarBottom { ...props }/>,
   tabBarPosition: 'bottom',
@@ -36,7 +37,7 @@ const AppMainStack = StackNavigator({
   Settings: { screen: SettingsScreen },
 }, {
   cardStyle: {
-    backgroundColor: '#FCE4EC',
+    backgroundColor: Colors.PINK_50,
   },
   mode: 'modal',
 });
@@ -55,8 +56,9 @@ const AppDrawer = DrawerNavigator({
       { ...props }
     />,
   contentOptions: {
-    activeBackgroundColor: '#F48FB1',
-    activeTintColor: 'white',
+    activeBackgroundColor: Colors.PINK_100,
+    activeTintColor: Colors.WHITE,
+    inactiveTintColor: Colors.PINK_200,
   },
 });
 

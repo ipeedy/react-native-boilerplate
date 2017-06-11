@@ -3,6 +3,7 @@ import { DrawerItems } from 'react-navigation';
 import { View, StyleSheet } from 'react-native';
 
 import Button from './Button';
+import Colors from '../styles/Colors';
 
 const CustomDrawerContent = (props) => (
   <View style={{ flex: 1 }}>
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 60,
-    backgroundColor: '#EC407A',
+    backgroundColor: Colors.PINK_100,
   },
   buttonContainer: {
     flex: 2,

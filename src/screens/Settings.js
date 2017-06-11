@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 import { Back } from '../components/icons';
+import Colors from '../styles/Colors';
 
 class SettingsScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     headerStyle: {
-      backgroundColor: '#F8BBD0',
+      backgroundColor: Colors.PINK_100,
     },
     headerTitle: 'Settings',
     headerTitleStyle: {
-      color: '#fff',
+      color: Colors.WHITE,
     },
     headerLeft: <Back onPress={() => navigation.goBack()} />
   });
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    color: 'white',
+    color: Colors.WHITE,
   },
 });
 

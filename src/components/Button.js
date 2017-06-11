@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
 
+import Colors from '../styles/Colors';
+
 class Button extends Component {
   render() {
     const { text, onPress } = this.props;
@@ -9,7 +11,7 @@ class Button extends Component {
       <View>
         <TouchableHighlight
           style={styles.button}
-          underlayColor="#F48FB1"
+          underlayColor={Colors.PINK_200}
           onPress={onPress}
         >
           <Text style={styles.text}>{text}</Text>
@@ -23,7 +25,7 @@ const styles = StyleSheet.create({
   button: {
     width: 130,
     height: 40,
-    backgroundColor: '#F8BBD0',
+    backgroundColor: Colors.PINK_100,
     padding: 10,
     borderRadius: 5,
     justifyContent: 'center',
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    color: 'white',
+    color: Colors.WHITE,
   },
 });
 

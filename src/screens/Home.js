@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 import { Hamburger } from '../components/icons';
+import Colors from '../styles/Colors';
 
 class HomeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -11,11 +12,11 @@ class HomeScreen extends Component {
       <FontAwesome name="home" size={25} color={tintColor} />
     ),
     headerStyle: {
-      backgroundColor: '#F8BBD0',
+      backgroundColor: Colors.PINK_100,
     },
     headerTitle: 'Sweet Home',
     headerTitleStyle: {
-      color: '#fff',
+      color: Colors.WHITE,
     },
     headerLeft: <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />
   });
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    color: 'white',
+    color: Colors.WHITE,
   },
 });
 

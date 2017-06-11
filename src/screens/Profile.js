@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 
 import { Hamburger, Settings } from '../components/icons';
+import Colors from '../styles/Colors';
 
 class ProfileScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -11,11 +12,11 @@ class ProfileScreen extends Component {
       <FontAwesome name="user-circle" size={25} color={tintColor} />
     ),
     headerStyle: {
-      backgroundColor: '#F8BBD0',
+      backgroundColor: Colors.PINK_100,
     },
     headerTitle: 'Profile',
     headerTitleStyle: {
-      color: '#fff',
+      color: Colors.WHITE,
     },
     headerLeft: <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />,
     headerRight: <Settings onPress={() => navigation.navigate('Settings')} />,
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    color: 'white',
+    color: Colors.WHITE,
   },
 });
 

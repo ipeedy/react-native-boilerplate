@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 import { Button } from '../components';
+import Colors from '../styles/Colors';
 
 class WelcomeScreen extends Component {
   render() {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    color: 'white',
+    color: Colors.WHITE,
   },
   buttonContainer: {
     top: 100,

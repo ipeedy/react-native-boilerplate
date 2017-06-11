@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import Navigator from './Navigator';
+import Colors from './styles/Colors';
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
           <View
             style={{
               height: 24,
-              backgroundColor: "rgba(0, 0, 0, 0.15)",
+              backgroundColor: Colors.PINK_200,
             }}
           />
           : null }
@@ -28,7 +29,7 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FCE4EC',
+    backgroundColor: Colors.PINK_50,
   }
 });
 
