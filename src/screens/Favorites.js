@@ -7,6 +7,10 @@ import Colors from '../styles/Colors';
 
 class FavoritesScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
+    drawerLabel: 'Favorites',
+    drawerIcon: ({ tintColor }) => (
+      <FontAwesome name="heartbeat" size={23} color={tintColor} />
+    ),
     tabBarLabel: 'Favorites',
     tabBarIcon: ({ tintColor }) => (
       <FontAwesome name="heartbeat" size={23} color={tintColor} />

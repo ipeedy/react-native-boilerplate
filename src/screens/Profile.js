@@ -7,6 +7,10 @@ import Colors from '../styles/Colors';
 
 class ProfileScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
+    drawerLabel: 'Profile',
+    drawerIcon: ({ tintColor }) => (
+      <FontAwesome name="user-circle" size={23} color={tintColor} />
+    ),
     tabBarLabel: 'Profile',
     tabBarIcon: ({ tintColor }) => (
       <FontAwesome name="user-circle" size={23} color={tintColor} />

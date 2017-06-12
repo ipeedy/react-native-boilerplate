@@ -7,6 +7,10 @@ import Colors from '../styles/Colors';
 
 class HomeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
+    drawerLabel: 'Sweet home',
+    drawerIcon: ({ tintColor }) => (
+      <FontAwesome name="home" size={23} color={tintColor} />
+    ),
     tabBarLabel: 'Home',
     tabBarIcon: ({ tintColor }) => (
       <FontAwesome name="home" size={23} color={tintColor} />

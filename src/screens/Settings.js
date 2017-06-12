@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import { BackIcon } from '../components/icons';
 import Colors from '../styles/Colors';
 
 class SettingsScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
+    drawerLabel: 'Settings',
+    drawerIcon: ({ tintColor }) => (
+      <Ionicons name="md-settings" size={23} color={tintColor} />
+    ),
     headerStyle: {
       backgroundColor: Colors.PINK_100,
     },
