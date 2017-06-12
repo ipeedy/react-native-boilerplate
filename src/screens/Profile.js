@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 
-import { Hamburger, Settings } from '../components/icons';
+import { HamburgerIcon, SettingsIcon } from '../components/icons';
 import Colors from '../styles/Colors';
 
 class ProfileScreen extends Component {
@@ -18,8 +18,8 @@ class ProfileScreen extends Component {
     headerTitleStyle: {
       color: Colors.WHITE,
     },
-    headerLeft: <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />,
-    headerRight: <Settings onPress={() => navigation.navigate('Settings')} />,
+    headerLeft: <HamburgerIcon onPress={() => navigation.navigate('DrawerOpen')} />,
+    headerRight: <SettingsIcon onPress={() => navigation.navigate('Settings')} />,
   })
 
   render() {

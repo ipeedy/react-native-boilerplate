@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import { Back } from '../components/icons';
+import { BackIcon } from '../components/icons';
 import Colors from '../styles/Colors';
 
 class SettingsScreen extends Component {
@@ -13,7 +13,7 @@ class SettingsScreen extends Component {
     headerTitleStyle: {
       color: Colors.WHITE,
     },
-    headerLeft: <Back onPress={() => navigation.goBack()} />
+    headerLeft: <BackIcon onPress={() => navigation.goBack()} />
   });
 
   render() {

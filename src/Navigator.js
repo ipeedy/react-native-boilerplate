@@ -24,8 +24,8 @@ const AppMainTab = TabNavigator({
 }, {
   tabBarOptions: {
     activeTintColor: Colors.WHITE,
-    inactiveTintColor: Platform.OS === 'ios' ? Colors.PINK_100 : Colors.WHITE,
-    inactiveBackgroundColor: Platform.OS === 'ios' ? Colors.WHITE : Colors.PINK_100,
+    inactiveTintColor: Colors.PINK_50,
+    inactiveBackgroundColor: Colors.PINK_100,
     activeBackgroundColor: Colors.PINK_100,
     showIcon: true,
     showLabel: Platform.OS === 'ios',

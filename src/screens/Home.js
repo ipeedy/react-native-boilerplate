@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-import { Hamburger } from '../components/icons';
+import { HamburgerIcon } from '../components/icons';
 import Colors from '../styles/Colors';
 
 class HomeScreen extends Component {
@@ -18,7 +18,7 @@ class HomeScreen extends Component {
     headerTitleStyle: {
       color: Colors.WHITE,
     },
-    headerLeft: <Hamburger onPress={() => navigation.navigate('DrawerOpen')} />
+    headerLeft: <HamburgerIcon onPress={() => navigation.navigate('DrawerOpen')} />
   });
 
   render() {
