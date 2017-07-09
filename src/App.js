@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.PINK_50,
-  }
+  },
 });
 
 export default App;

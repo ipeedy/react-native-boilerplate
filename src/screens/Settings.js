@@ -18,7 +18,7 @@ class SettingsScreen extends Component {
     headerTitleStyle: {
       color: Colors.WHITE,
     },
-    headerLeft: <BackIcon onPress={() => navigation.goBack()} />
+    headerLeft: <BackIcon onPress={() => navigation.goBack()} />,
   });
 
   render() {

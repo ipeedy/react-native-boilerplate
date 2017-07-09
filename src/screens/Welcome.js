@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
   buttonContainer: {
     top: 100,
   },
-})
+});
 
 export default WelcomeScreen;

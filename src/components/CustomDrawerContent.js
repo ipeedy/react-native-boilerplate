@@ -12,7 +12,7 @@ const CustomDrawerContent = (props) => (
         <View style={styles.avatar} />
       </View>
       <View style={{ flex: 6 }}>
-        <DrawerItems { ...props } />
+        <DrawerItems {...props} />
       </View>
     </View>
     <View style={styles.buttonContainer}>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
 });
 
 export default CustomDrawerContent;

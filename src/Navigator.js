@@ -4,7 +4,6 @@ import {
   TabNavigator,
   StackNavigator,
   DrawerNavigator,
-  TabBarBottom,
 } from 'react-navigation';
 
 import Colors from './styles/Colors';
@@ -37,7 +36,6 @@ const AppMainTab = TabNavigator({
     },
     upperCaseLabel: false,
   },
-  // tabBarComponent: (props) => <TabBarBottom { ...props }/>,
   tabBarPosition: 'bottom',
   swipeEnabled: false,
   animationEnabled: false,
@@ -62,9 +60,9 @@ const AppDrawer = DrawerNavigator({
   },
 }, {
   contentComponent: props =>
-    <CustomDrawerContent
-      { ...props }
-    />,
+    (<CustomDrawerContent
+      {...props}
+    />),
   contentOptions: {
     activeBackgroundColor: Colors.PINK_100,
     activeTintColor: Colors.WHITE,
