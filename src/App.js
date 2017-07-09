@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Platform } from 'react-native';
+import { View, StyleSheet, StatusBar, Platform } from 'react-native';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -11,6 +11,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <View style={styles.container}>
+          <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
           { Platform.OS === 'android' && Platform.Version >= 20 ?
           <View
             style={{
