@@ -2,10 +2,11 @@
   "name": "react-native-boilerplate",
   "version": "0.0.0",
   "description": "Hello Expo!",
-  "author": null,
+  "author": "bkdev",
   "private": true,
   "main": "main.js",
   "dependencies": {
+    "eslint-config-equimper": "^2.1.2",
     "expo": "17.0.0",
     "react": "16.0.0-alpha.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz",
@@ -15,7 +16,6 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.1"
+    "eslint": "^3.19.0"
   }
 }
