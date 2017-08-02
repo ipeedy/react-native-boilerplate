@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "react-native-boilerplate",
+    "description": "A React Native boilerplate with Expo, Redux, React Navigation and some 💕 included.",
+    "slug": "react-native-boilerplate",
+    "privacy": "public",
+    "sdkVersion": "19.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/icons/app.png",
+    "loading": {
+      "icon": "./assets/icons/loading.png",
+      "hideExponentText": false
+    },
+    "packagerOpts": {
+      "assetExts": ["ttf", "mp4"]
+    },
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
