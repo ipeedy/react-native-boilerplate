@@ -6,16 +6,16 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "eslint-config-equimper": "^2.1.2",
-    "expo": "17.0.0",
-    "react": "16.0.0-alpha.6",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz",
+    "expo": "^18.0.1",
+    "react": "16.0.0-alpha.12",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-18.0.1.tar.gz",
     "react-navigation": "^1.0.0-beta.11",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "eslint-config-equimper": "^2.1.2",
     "eslint": "^3.19.0"
   }
 }
