@@ -1,40 +1,34 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
+import { withTheme } from 'styled-components';
+import styled from 'styled-components/native';
 
-import Colors from '../styles/Colors';
+const ButtonContainer = styled.TouchableHighlight`
+  width: 130;
+  height: 40;
+  backgroundColor: ${props=> props.theme.PINK_100};
+  borderRadius: 5;
+  justifyContent: center;
+  alignItems: center;
+`;
+
+const Text = styled.Text`
+  fontSize: 20;
+  color: ${props => props.theme.WHITE};
+`;
 
 class Button extends Component {
   render() {
-    const { text, onPress } = this.props;
+    const { text, onPress, theme } = this.props;
 
     return (
-      <View>
-        <TouchableHighlight
-          style={styles.button}
-          underlayColor={Colors.PINK_200}
-          onPress={onPress}
-        >
-          <Text style={styles.text}>{text}</Text>
-        </TouchableHighlight>
-      </View>
+      <ButtonContainer
+        underlayColor={theme.PINK_200}
+        onPress={onPress}
+      >
+        <Text>{text}</Text>
+      </ButtonContainer>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  button: {
-    width: 130,
-    height: 40,
-    backgroundColor: Colors.PINK_100,
-    padding: 10,
-    borderRadius: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 20,
-    color: Colors.WHITE,
-  },
-});
-
-export default Button;
+export default withTheme(Button);

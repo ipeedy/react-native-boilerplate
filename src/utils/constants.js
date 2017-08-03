@@ -1,4 +1,4 @@
-export default {
+export const colors = {
   WHITE: '#FFFFFF',
   PINK_50: '#FCE4EC',
   PINK_100: '#F8BBD0',

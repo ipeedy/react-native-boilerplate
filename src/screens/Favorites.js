@@ -1,49 +1,26 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { FontAwesome } from '@expo/vector-icons';
+import styled from 'styled-components/native';
 
-import { HamburgerIcon } from '../components/icons';
-import Colors from '../styles/Colors';
+
+const ContainerView = styled.View`
+  flex: 1;
+  justifyContent: center;
+  alignItems: center;
+`;
+
+const TitleText = styled.Text`
+  fontSize: 30;
+  color: ${props => props.theme.WHITE};
+`;
 
 class FavoritesScreen extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    drawerLabel: 'Favorites',
-    drawerIcon: ({ tintColor }) => (
-      <FontAwesome name="heartbeat" size={23} color={tintColor} />
-    ),
-    tabBarLabel: 'Favorites',
-    tabBarIcon: ({ tintColor }) => (
-      <FontAwesome name="heartbeat" size={23} color={tintColor} />
-    ),
-    headerStyle: {
-      backgroundColor: Colors.PINK_100,
-    },
-    headerTitle: 'Favorites',
-    headerTitleStyle: {
-      color: Colors.WHITE,
-    },
-    headerLeft: <HamburgerIcon onPress={() => navigation.navigate('DrawerOpen')} />,
-  });
-
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Favorites</Text>
-      </View>
+      <ContainerView>
+        <TitleText>Favorites</TitleText>
+      </ContainerView>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 30,
-    color: Colors.WHITE,
-  },
-});
 
 export default FavoritesScreen;

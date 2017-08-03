@@ -1,35 +1,34 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
 
 import { Button } from '../components';
-import Colors from '../styles/Colors';
+
+const ContainerView = styled.View`
+  flex: 1;
+  justifyContent: center;
+  alignItems: center;
+`;
+
+const TitleText = styled.Text`
+  fontSize: 30;
+  color: ${props => props.theme.WHITE};
+`;
+
+const ButtonContainer = styled.View`
+  top: 100;
+`
 
 class WelcomeScreen extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Welcome</Text>
-        <View style={styles.buttonContainer}>
+      <ContainerView>
+        <TitleText>Welcome</TitleText>
+        <ButtonContainer>
           <Button text="Go to main" onPress={() => this.props.navigation.navigate('Main')} />
-        </View>
-      </View>
+        </ButtonContainer>
+      </ContainerView>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 30,
-    color: Colors.WHITE,
-  },
-  buttonContainer: {
-    top: 100,
-  },
-});
 
 export default WelcomeScreen;
