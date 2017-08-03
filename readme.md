@@ -14,7 +14,7 @@
 
 - Run with Expo: [React Native Boilerplate](https://expo.io/@bkdev/react-native-boilerplate)
 
-## Technology
+## Technologies
 - [React Native (Expo)](https://docs.expo.io/versions/v18.0.0/index.html)
 - [React Navigation](https://reactnavigation.org/)
 - [Redux](redux.js.org)
@@ -24,7 +24,7 @@
 ## Getting Started
 Clone this repository
 ```
-git clone git@github.com:bkdev98/react-native-boilerplate.git new-project
+$ git clone git@github.com:bkdev98/react-native-boilerplate.git new-project
 ```
 Install node modules, [Yarn](https://yarnpkg.com/en/) is highly recommended.
 ```
