@@ -6,19 +6,19 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "expo": "^19.0.0",
-    "react": "16.0.0-alpha.12",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-19.0.0.tar.gz",
-    "react-navigation": "^1.0.0-beta.11",
-    "react-redux": "^5.0.5",
-    "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
-    "styled-components": "^2.1.1"
+    "expo": "25.0.0",
+    "react": "16.2.0",
+    "react-native": "github:expo/react-native#sdk-25.0.0",
+    "react-navigation": "1.5.8",
+    "react-redux": "5.0.7",
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0",
+    "styled-components": "3.2.3"
   },
   "devDependencies": {
-    "eslint": "^4.3.0",
-    "eslint-config-equimper": "^2.2.1",
-    "eslint-config-prettier": "^2.3.0",
-    "prettier": "^1.5.3"
+    "eslint": "4.3.0",
+    "eslint-config-equimper": "2.2.1",
+    "eslint-config-prettier": "2.3.0",
+    "prettier": "1.5.3"
   }
 }
