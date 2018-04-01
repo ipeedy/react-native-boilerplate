@@ -7,13 +7,18 @@ const INITIAL_STATE = {
   token: null,
 };
 
-export default function (state = INITIAL_STATE, action) {
+ const Auth = (state = INITIAL_STATE, action) => {
+	console.log("AUTH REDUCER");
   switch (action.type) {
-    case AUTH_SUCCESS:
+		case AUTH_SUCCESS:
+		console.log("AUTH SUCCESS");
       return state;
-    case AUTH_FAIL:
+		case AUTH_FAIL:
+		console.log("AUTH FAIL");
       return state;
-    default:
+		default:
+		console.log("AUTH DEFAULT");
       return state;
   }
 }
+export default Auth;

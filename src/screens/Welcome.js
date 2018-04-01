@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/native';
+import { FormattedMessage } from 'react-native-globalize';
 
+import { changeLanguage } from '../actions'
 import { Button } from '../components';
 
 const ContainerView = styled.View`
@@ -19,12 +21,18 @@ const ButtonContainer = styled.View`
 `
 
 class WelcomeScreen extends Component {
-  render() {
+	render() {
     return (
       <ContainerView>
-        <TitleText>Welcome</TitleText>
+        <TitleText>
+				  <FormattedMessage
+            message="Welcome"
+          />
+				  </TitleText>
         <ButtonContainer>
           <Button text="Go to main" onPress={() => this.props.navigation.navigate('Main')} />
+					<Button text="Set lang to DK - Directly" onPress={() => {changeLanguage('DK')}} />
+					<Button text="Set lang to DK - Dispatch" onPress={() => {this.props.navigation.dispatch({type:'change_language'})}} />
         </ButtonContainer>
       </ContainerView>
     );

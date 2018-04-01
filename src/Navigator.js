@@ -133,17 +133,17 @@ const AppDrawer = DrawerNavigator({
         color: colors.WHITE,
       },
       headerLeft: <BackIcon onPress={() => navigation.goBack()} />,
-    })
+		}),
   },
 }, {
   contentComponent: props =>
     (<CustomDrawerContent
       {...props}
-    />),
+		/>),
   contentOptions: {
     activeBackgroundColor: colors.PINK_100,
     activeTintColor: colors.WHITE,
-    inactiveTintColor: colors.PINK_200,
+		inactiveTintColor: colors.PINK_200,
   },
 });
 
