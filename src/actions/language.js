@@ -5,7 +5,8 @@ import {
 function changeLanguage(language) {
 	console.log("ACTION: CHANGE LANGUAGE TO: " + language);
 	return {
-	  type: LANGUAGE_CHANGE
+	  type: LANGUAGE_CHANGE,
+	  payload: {language},
 	}
   }
 export {changeLanguage}

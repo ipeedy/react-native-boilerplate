@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components/native';
 import { FormattedMessage } from 'react-native-globalize';
 
@@ -19,7 +20,6 @@ const TitleText = styled.Text`
 const ButtonContainer = styled.View`
   top: 100;
 `
-
 class WelcomeScreen extends Component {
 	render() {
     return (
@@ -31,7 +31,7 @@ class WelcomeScreen extends Component {
 				  </TitleText>
         <ButtonContainer>
           <Button text="Go to main" onPress={() => this.props.navigation.navigate('Main')} />
-					<Button text="Set lang to DK - Directly" onPress={() => {changeLanguage('DK')}} />
+					<Button text="Set lang to DK - Directly" onPress={() => {this.props.changeLanguage('da')}} />
 					<Button text="Set lang to DK - Dispatch" onPress={() => {this.props.navigation.dispatch({type:'change_language'})}} />
         </ButtonContainer>
       </ContainerView>
@@ -39,4 +39,8 @@ class WelcomeScreen extends Component {
   }
 }
 
-export default WelcomeScreen;
+const mapStateToProps = () => ({ });
+
+export default connect(mapStateToProps, {
+	changeLanguage,
+})(WelcomeScreen);

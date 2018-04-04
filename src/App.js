@@ -23,11 +23,10 @@ const StatusBarAndroid = styled.View`
 
 class App extends Component {
   render() {
-		const state = store.getState();
     return (
       <Provider store={store}>
         <ThemeProvider theme={colors}>
-				  <FormattedWrapper locale={state.Language.language} messages={messages}>
+				  <FormattedWrapper locale='en' messages={messages}>
             <Root>
               <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
               { Platform.OS === 'android' && Platform.Version >= 20 ? <StatusBarAndroid /> : null }

@@ -12,8 +12,10 @@ import {
 	  case LANGUAGE_CHANGE:
 	  console.log("LANG REDUCER: LANGUAGE CHANGE")
 		return Object.assign({}, state, {
-			language: action.langauge,
-		  })
+			language: action.payload.language,
+		  });
+
+		 //return { ...state, language: action.payload.colorName} };
 	  default:
 	  console.log("LANG REDUCER: Don't know how to handle: '" + action.type + "'");
 		return state;
