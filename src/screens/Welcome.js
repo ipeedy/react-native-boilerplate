@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components/native';
-import { FormattedMessage } from 'react-native-globalize';
+import { FormattedWrapper, FormattedMessage } from 'react-native-globalize';
 
-import { changeLanguage } from '../actions'
 import { Button } from '../components';
+import messages from '../Messages';
 
 const ContainerView = styled.View`
   flex: 1;
@@ -23,24 +23,25 @@ const ButtonContainer = styled.View`
 class WelcomeScreen extends Component {
 	render() {
     return (
+			<FormattedWrapper locale={this.props.curState.Language.language} messages={messages}>
       <ContainerView>
-        <TitleText>
+				<TitleText>
 				  <FormattedMessage
             message="Welcome"
           />
 				  </TitleText>
         <ButtonContainer>
           <Button text="Go to main" onPress={() => this.props.navigation.navigate('Main')} />
-					<Button text="Set lang to DK - Directly" onPress={() => {this.props.changeLanguage('da')}} />
-					<Button text="Set lang to DK - Dispatch" onPress={() => {this.props.navigation.dispatch({type:'change_language'})}} />
         </ButtonContainer>
       </ContainerView>
+			</FormattedWrapper>
     );
   }
 }
 
-const mapStateToProps = () => ({ });
+const mapStateToProps = (state) => ({
+	curState:state
+});
 
 export default connect(mapStateToProps, {
-	changeLanguage,
 })(WelcomeScreen);

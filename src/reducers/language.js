@@ -7,17 +7,12 @@ import {
   };
 
   const Language = (state = INITIAL_STATE, action) => {
-	  console.log("LANG REDUCER: SWTICH, args: STATE:",state," ACTION:",action);
 	switch (action.type) {
 	  case LANGUAGE_CHANGE:
-	  console.log("LANG REDUCER: LANGUAGE CHANGE")
 		return Object.assign({}, state, {
 			language: action.payload.language,
 		  });
-
-		 //return { ...state, language: action.payload.colorName} };
 	  default:
-	  console.log("LANG REDUCER: Don't know how to handle: '" + action.type + "'");
 		return state;
 	}
   }
