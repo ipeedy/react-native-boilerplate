@@ -7,13 +7,14 @@ const INITIAL_STATE = {
   token: null,
 };
 
-export default function (state = INITIAL_STATE, action) {
+ const Auth = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case AUTH_SUCCESS:
+		case AUTH_SUCCESS:
       return state;
-    case AUTH_FAIL:
+		case AUTH_FAIL:
       return state;
-    default:
+		default:
       return state;
   }
 }
+export default Auth;
