@@ -1,5 +1,7 @@
 # React Native Boilerplate
 
+> This repo is outdated. Bear with me till this weekend for updates.
+
 [![dependencies Status](https://david-dm.org/bkdev98/react-native-boilerplate/status.svg?style=flat-square)](https://david-dm.org/bkdev98/react-native-boilerplate/status.svg)
 [![devDependencies Status](https://david-dm.org/bkdev98/react-native-boilerplate/dev-status.svg?style=flat-square)](https://david-dm.org/bkdev98/react-native-boilerplate?type=dev)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](#badge)
